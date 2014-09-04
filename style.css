@@ -21,22 +21,34 @@ body{
   z-index: 4;
 }
 .parallax__layer--back {
-  transform: translateZ(-1px);
+  /*transform: translateZ(-1px);*/
+  transform: translateZ(-300px) scale(2);
+
   z-index: 3;
 }
 
 .parallax__group {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   transform-style: preserve-3d;
 }
 
 .parallax__group {
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+    /*transform: translate3d(700px, 0, -800px) rotateY(30deg);*/
+    transition: transform 0.5s;
 }
 
 #group1{
+  z-index: 5;
+}
+
+#group1 .parallax__layer--base{
   background-color: yellow;
+
+}
+
+#group2 .parallax__layer--back{
+  background-color: red;
 }
 
 /*#group2{
